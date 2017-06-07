@@ -7,13 +7,14 @@ import { Component } from '@angular/core';
   <h3>Check Out Our Flavors Below!</h3>
   <div *ngFor="let keg of kegs" class="container">
     <h4><a (click)="showDetails(keg)">{{keg.name}}</a></h4>
+    <button (click)="subtractPint(keg)">Sold Pint</button>
   </div>
   <div *ngIf="kegToBeShown">
-      <h3>{{kegToBeShown.name}}</h3>
-      <p>{{kegToBeShown.brand}}</p>
-      <p>{{kegToBeShown.flavor}}</p>
-      <p>{{kegToBeShown.price}}</p>
-      <p>{{kegToBeShown.pints}}</p>
+    <h3>{{kegToBeShown.name}}</h3>
+    <p>{{kegToBeShown.brand}}</p>
+    <p>{{kegToBeShown.flavor}}</p>
+    <p>{{kegToBeShown.price}}</p>
+    <p>{{kegToBeShown.pints}}</p>
   </div>
   `
 })
@@ -30,6 +31,12 @@ export class AppComponent {
   showDetails(keg) {
     this.kegToBeShown = keg;
   }
+
+  subtractPint(keg) {
+    let pintsRemaining = keg.pints - 1;
+    keg.pints = pintsRemaining;
+  }
+
 }
 
 export class Keg {
