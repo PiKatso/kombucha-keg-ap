@@ -6,12 +6,14 @@ import { Keg }  from './keg.model';
   template: `
   <h1>Kat & Kane Kombucha Kegs</h1>
   <h3>Check Out Our Flavors Below!</h3>
-  <keg-list [childKegList]="kegsList"></keg-list>
+  <keg-list [childKegList]="kegsList" (clickSender)="editKeg($event)"></keg-list>
+  <edit-keg [currentKeg]="selectedKeg" (editCompleteSender)="finishedEditing()"></edit-keg>
   <new-keg (newKegSender)="addNewKeg($event)"></new-keg>
   `
 })
 
 export class AppComponent {
+  selectedKeg: Keg = null;
   kegsList: Keg[] = [
     new Keg('Love', 'Brew Dr. Kombucha', 'Jasmine & Lavender', 4),
     new Keg('Herbal Uplift', 'Brew Dr. Kombucha', 'Green & Peppermint', 4),
@@ -22,4 +24,11 @@ export class AppComponent {
     this.kegsList.push(newKegFromChild);
   }
 
+  editKeg(kegToEdit: Keg) {
+    this.selectedKeg = kegToEdit;
+  }
+
+  finishedEditing() {
+    this.selectedKeg = null;
+  }
 }
