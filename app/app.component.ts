@@ -5,8 +5,15 @@ import { Component } from '@angular/core';
   template: `
   <h1>Kat & Kane Kombucha Kegs</h1>
   <h3>Check Out Our Flavors Below!</h3>
-  <div>
-      <p *ngFor="let keg of kegs">{{keg.name}}</p>
+  <div *ngFor="let keg of kegs" class="container">
+    <h4><a (click)="showDetails(keg)">{{keg.name}}</a></h4>
+  </div>
+  <div *ngIf="kegToBeShown">
+      <h3>{{kegToBeShown.name}}</h3>
+      <p>{{kegToBeShown.brand}}</p>
+      <p>{{kegToBeShown.flavor}}</p>
+      <p>{{kegToBeShown.price}}</p>
+      <p>{{kegToBeShown.pints}}</p>
   </div>
   `
 })
@@ -18,6 +25,11 @@ export class AppComponent {
     new Keg('Bliss', 'LionHeart Kombucha', 'Lemon & Lavender', 5, 124),
   ];
 
+  kegToBeShown = null;
+
+  showDetails(keg) {
+    this.kegToBeShown = keg;
+  }
 }
 
 export class Keg {
