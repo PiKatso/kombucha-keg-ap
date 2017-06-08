@@ -23,9 +23,9 @@ import { Keg }  from './keg.model';
 export class AppComponent {
   selectedKeg: Keg = null;
   kegsList: Keg[] = [
-    new Keg('Love', 'Brew Dr. Kombucha', 'Jasmine & Lavender', 4),
-    new Keg('Herbal Uplift', 'Brew Dr. Kombucha', 'Green & Peppermint', 4),
-    new Keg('Bliss', 'LionHeart Kombucha', 'Lemon & Lavender', 5)
+    new Keg('Love', 'Brew Dr. Kombucha', 'Jasmine & Lavender', 3),
+    new Keg('Herbal Uplift', 'Brew Dr. Kombucha', 'Green & Peppermint', 5),
+    new Keg('Bliss', 'LionHeart Kombucha', 'Lemon & Lavender', 6)
   ];
 
   addNewKeg(newKegFromChild: Keg) {

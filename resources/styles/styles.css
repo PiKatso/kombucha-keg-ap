@@ -1,10 +1,13 @@
 body {
-  background-color: #eff0f2;
+  /*background-color: #eff0f2;*/
+  background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/05/Bubble-Backgrounds.jpg");
 }
 
 .jumbotron {
   text-align: center;
-  background-color: #bdd1ed;
+  color: #f2eff9;
+  background-color: rgba(0, 0, 0, 0.4);
+
 
 }
 
@@ -14,6 +17,10 @@ body {
 
 .keg-details{
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #f2eff9;
+  padding: 15px 0px 15 0px;
+  margin: 10px 0px 10px 0px;
 }
 
 .edit-keg {
@@ -25,27 +32,28 @@ body {
 }
 
 .footer {
-  padding: 15px 0;
+  padding: 10px 0;
   position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #bdd1ed;
+  background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
+  color: #f2eff9;
 }
 
 .price-expensive {
-  background-color: darkgray;
+  background-color: rgba(173, 0, 0, 0.6);
   padding: 10px 0px 15px 0px;
   border-radius: 15px;
 }
 .price-cheap {
-  background-color: white;
+  background-color: rgba(23, 17, 191, 0.4);
   padding: 10px 0px 15px 0px;
   border-radius: 15px;
 }
 .price-average {
-  background-color: lightgray;
+  background-color: rgba(81, 31, 131, 0.8);
   padding: 10px 0px 15px 0px;
   border-radius: 15px;
 }

@@ -13,7 +13,7 @@ import { Keg } from './keg.model';
           </div>
         </div>
       </div>
-    </div><hr>
+    </div>
 
     <div *ngIf="kegToBeShown" class="keg-details">
       <h3>{{kegToBeShown.name}}</h3>
@@ -21,7 +21,7 @@ import { Keg } from './keg.model';
       <p>Flavor: {{kegToBeShown.flavor}}</p>
       <p>Price: {{kegToBeShown.price}}</p>
       <p>Pints Remaining: {{kegToBeShown.pints}}</p>
-      <button class="btn btn-default" (click)="editButtonHasBeenClicked(kegToBeShown)">Edit</button><hr>
+      <button class="btn btn-default" (click)="editButtonHasBeenClicked(kegToBeShown)">Edit</button>
     </div>
 
     <div class="pints-low">
