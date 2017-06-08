@@ -4,11 +4,19 @@ import { Keg }  from './keg.model';
 @Component({
   selector: 'app-root',
   template: `
-  <h1>Kat & Kane Kombucha Kegs</h1>
-  <h3>Check Out Our Flavors Below!</h3>
+  <div class="nav-bar">
+    <h1>Kat & Kane<br>Kombucha Kegs</h1>
+    <h3>Check Out Our Flavors Below!</h3>
+  </div>
+
   <keg-list [childKegList]="kegsList" (clickSender)="editKeg($event)"></keg-list>
-  <edit-keg [currentKeg]="selectedKeg" (editCompleteSender)="finishedEditing()"></edit-keg>
-  <new-keg (newKegSender)="addNewKeg($event)"></new-keg>
+  <div class="edit-keg">
+    <edit-keg [currentKeg]="selectedKeg" (editCompleteSender)="finishedEditing()"></edit-keg>
+  </div>
+
+  <div class="footer">
+    <new-keg (newKegSender)="addNewKeg($event)"></new-keg>
+  </div>
   `
 })
 

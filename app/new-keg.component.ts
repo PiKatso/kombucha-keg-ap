@@ -6,22 +6,14 @@ import { Keg }  from './keg.model';
   template: `
   <h1>New Keg</h1>
   <div>
-    <div>
-      <label>Kombucha Name:</label>
-      <input #newName>
-    </div>
-    <div>
-      <label>Brand:</label>
-      <input #newBrand>
-    </div>
-    <div>
-      <label>Flavor:</label>
-      <input #newFlavor>
-    </div>
-    <div>
-      <label>Price:</label>
-      <input #newPrice>
-    </div>
+    <label>Kombucha Name:</label>
+    <input #newName>
+    <label>Brand:</label>
+    <input #newBrand>
+    <label>Flavor:</label>
+    <input #newFlavor>
+    <label>Price:</label>
+    <input #newPrice>
     <button (click)="saveNew(newName.value, newBrand.value, newFlavor.value, newPrice.value)">Add</button>
   </div>
   `

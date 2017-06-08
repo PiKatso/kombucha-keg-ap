@@ -1,3 +1,34 @@
 body {
   background-color: gray;
 }
+
+.nav-bar {
+  text-align: center;
+
+}
+
+.keg-item{
+  text-align: center;
+}
+
+.keg-details{
+  text-align: center;
+}
+
+.edit-keg {
+  text-align: center;
+}
+
+.pints-low {
+  text-align: center;
+}
+
+.footer {
+  padding: 15px 0;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: purple;
+  text-align: center;
+}
