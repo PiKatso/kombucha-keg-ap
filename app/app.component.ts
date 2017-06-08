@@ -4,7 +4,7 @@ import { Keg }  from './keg.model';
 @Component({
   selector: 'app-root',
   template: `
-  <div class="nav-bar">
+  <div class="jumbotron">
     <h1>Kat & Kane<br>Kombucha Kegs</h1>
     <h3>Check Out Our Flavors Below!</h3>
   </div>

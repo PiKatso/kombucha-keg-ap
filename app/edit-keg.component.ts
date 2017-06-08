@@ -4,21 +4,21 @@ import { Keg }  from './keg.model';
 @Component({
   selector: 'edit-keg',
   template: `
-  <div>
+  <form class="form-inline">
     <div *ngIf="currentKeg">
       <h3>Edit Keg</h3>
       <label>Kombucha Name</label>
-      <input [(ngModel)]="currentKeg.name">
+      <input class="form-control" [(ngModel)]="currentKeg.name" [ngModelOptions]="{standalone: true}">
       <label>Brand</label>
-      <input [(ngModel)]="currentKeg.brand">
+      <input class="form-control" [(ngModel)]="currentKeg.brand" [ngModelOptions]="{standalone: true}">
       <label>Flavor</label>
-      <input [(ngModel)]="currentKeg.flavor">
+      <input class="form-control" [(ngModel)]="currentKeg.flavor" [ngModelOptions]="{standalone: true}">
       <label>Price</label>
-      <input [(ngModel)]="currentKeg.price">
+      <input class="form-control" [(ngModel)]="currentKeg.price" [ngModelOptions]="{standalone: true}">
 
-      <button (click)="finishedEditing()">Done</button>
+      <button class="btn btn-default" (click)="finishedEditing()">Done</button>
     </div>
-  </div>
+  </form>
   `
 })
 

@@ -5,17 +5,17 @@ import { Keg }  from './keg.model';
   selector: 'new-keg',
   template: `
   <h1>New Keg</h1>
-  <div>
-    <label>Kombucha Name:</label>
-    <input #newName>
-    <label>Brand:</label>
-    <input #newBrand>
-    <label>Flavor:</label>
-    <input #newFlavor>
-    <label>Price:</label>
-    <input #newPrice>
-    <button (click)="saveNew(newName.value, newBrand.value, newFlavor.value, newPrice.value)">Add</button>
-  </div>
+  <form class="form-inline">
+      <label>Kombucha Name:</label>
+      <input class="form-control" #newName>
+      <label>Brand:</label>
+      <input class="form-control" #newBrand>
+      <label>Flavor:</label>
+      <input class="form-control" #newFlavor>
+      <label>Price:</label>
+      <input class="form-control" #newPrice>
+      <button class="btn btn-default" (click)="saveNew(newName.value, newBrand.value, newFlavor.value, newPrice.value)">Add</button>
+  </form>
   `
 })
 

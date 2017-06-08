@@ -7,8 +7,10 @@ import { Keg } from './keg.model';
     <div class="row">
       <div *ngFor="let keg of childKegList">
         <div class="col-md-4 keg-item">
-        <h4><a (click)="showDetails(keg)">{{keg.name}}</a></h4>
-        <button (click)="subtractPint(keg)">Sold Pint</button>
+          <div [class]="priceColor(keg)">
+            <h4><a (click)="showDetails(keg)">{{keg.name}}</a></h4>
+            <button class="btn btn-default" (click)="subtractPint(keg)">Sold Pint</button>
+          </div>
         </div>
       </div>
     </div><hr>
@@ -19,7 +21,7 @@ import { Keg } from './keg.model';
       <p>Flavor: {{kegToBeShown.flavor}}</p>
       <p>Price: {{kegToBeShown.price}}</p>
       <p>Pints Remaining: {{kegToBeShown.pints}}</p>
-      <button (click)="editButtonHasBeenClicked(kegToBeShown)">Edit</button><hr>
+      <button class="btn btn-default" (click)="editButtonHasBeenClicked(kegToBeShown)">Edit</button><hr>
     </div>
 
     <div class="pints-low">
@@ -37,6 +39,16 @@ export class KegListComponent {
   @Output() clickSender = new EventEmitter();
 
   kegToBeShown = null;
+
+  priceColor(kegToBeEvaluated: Keg) {
+    if (kegToBeEvaluated.price > 5) {
+      return "price-expensive";
+    } else if (kegToBeEvaluated.price < 4) {
+      return "price-cheap";
+    } else {
+      return "price-average";
+    }
+  }
 
   showDetails(keg) {
     this.kegToBeShown = keg;

@@ -1,9 +1,10 @@
 body {
-  background-color: gray;
+  background-color: #eff0f2;
 }
 
-.nav-bar {
+.jumbotron {
   text-align: center;
+  background-color: #bdd1ed;
 
 }
 
@@ -29,6 +30,22 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: purple;
+  background-color: #bdd1ed;
   text-align: center;
+}
+
+.price-expensive {
+  background-color: darkgray;
+  padding: 10px 0px 15px 0px;
+  border-radius: 15px;
+}
+.price-cheap {
+  background-color: white;
+  padding: 10px 0px 15px 0px;
+  border-radius: 15px;
+}
+.price-average {
+  background-color: lightgray;
+  padding: 10px 0px 15px 0px;
+  border-radius: 15px;
 }
