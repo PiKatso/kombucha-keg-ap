@@ -10,10 +10,10 @@ import { Keg } from './keg.model';
   </div>
   <div *ngIf="kegToBeShown">
     <h3>{{kegToBeShown.name}}</h3>
-    <p>{{kegToBeShown.brand}}</p>
-    <p>{{kegToBeShown.flavor}}</p>
-    <p>{{kegToBeShown.price}}</p>
-    <p>{{kegToBeShown.pints}}</p>
+    <p>Brand: {{kegToBeShown.brand}}</p>
+    <p>Flavor: {{kegToBeShown.flavor}}</p>
+    <p>Price: {{kegToBeShown.price}}</p>
+    <p>Pints Remaining: {{kegToBeShown.pints}}</p>
     <button (click)="editButtonHasBeenClicked(kegToBeShown)">Edit</button>
   </div>
   `
