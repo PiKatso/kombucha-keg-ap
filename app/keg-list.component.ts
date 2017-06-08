@@ -4,8 +4,19 @@ import { Keg } from './keg.model';
 @Component({
   selector: 'keg-list',
   template: `
+  <div class="row">
+    <div class="tapped-selector">
+      <label>View Kegs By:</label>
+      <select (change)="onChange($event.target.value)">
+        <option value="tapped">Tapped Kegs</option>
+        <option value="untapped">Untapped Kegs</option>
+        <option value="allKegs" selected="selected">All Kegs</option>
+      </select>
+    </div>
+  </div>
+
     <div class="row">
-      <div *ngFor="let keg of childKegList">
+      <div *ngFor="let keg of childKegList | tappedness:filterByTappedness">
         <div class="col-md-4 keg-item">
           <div [class]="priceColor(keg)">
             <h4><a (click)="showDetails(keg)">{{keg.name}}</a></h4>
@@ -38,7 +49,13 @@ export class KegListComponent {
   @Input() childKegList: Keg[];
   @Output() clickSender = new EventEmitter();
 
+  filterByTappedness: string = "allKegs";
+
   kegToBeShown = null;
+
+  onChange(selectionFromMenu) {
+    this.filterByTappedness = selectionFromMenu;
+  }
 
   priceColor(kegToBeEvaluated: Keg) {
     if (kegToBeEvaluated.price > 5) {
@@ -57,6 +74,7 @@ export class KegListComponent {
   subtractPint(keg) {
     let pintsRemaining = keg.pints - 1;
     keg.pints = pintsRemaining;
+    keg.tapped = true;
   }
 
   editButtonHasBeenClicked(kegToEdit: Keg) {

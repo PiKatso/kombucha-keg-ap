@@ -7,8 +7,6 @@ body {
   text-align: center;
   color: #f2eff9;
   background-color: rgba(0, 0, 0, 0.4);
-
-
 }
 
 .keg-item{
@@ -56,4 +54,17 @@ body {
   background-color: rgba(81, 31, 131, 0.8);
   padding: 10px 0px 15px 0px;
   border-radius: 15px;
+}
+
+.pints-low {
+  color: white;
+}
+
+label{
+  color: white;
+}
+
+.tapped-selector {
+  text-align: center;
+  padding: 10px;
 }

@@ -6,6 +6,7 @@ import { NewKegComponent } from './new-keg.component';
 import { EditKegComponent } from './edit-keg.component';
 import { FormsModule }  from '@angular/forms';
 import { PintsRemainingPipe } from './pints-remaining.pipe';
+import { TappednessPipe } from './tappedness.pipe';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule ],
@@ -14,7 +15,8 @@ import { PintsRemainingPipe } from './pints-remaining.pipe';
     KegListComponent,
     NewKegComponent,
     EditKegComponent,
-    PintsRemainingPipe
+    PintsRemainingPipe,
+    TappednessPipe
   ],
   bootstrap:    [ AppComponent ]
 })
